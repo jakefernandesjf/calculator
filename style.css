@@ -1,1 +1,61 @@
 /* style.css */
+
+:root {
+    --gap: 10px;
+    --padding: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Saira", sans-serif;
+    font-size: 42px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    width: 75px;
+    border: solid;
+    border-radius: 10px;
+}
+
+.container {
+    padding: 20px;
+    background-color: dimgrey;
+    border: solid;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.display {
+    font-size: 52px;
+    text-align: end;
+    margin-bottom: 20px;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    background-color: azure;
+    border: solid;
+}
+
+.controls {
+    flex: 1;
+    display: flex;
+    gap: var(--gap);
+}
+
+.numpad,
+.operators {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.numpad div {
+    display: flex;
+    gap: var(--gap);
+}
