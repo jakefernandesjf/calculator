@@ -1,8 +1,26 @@
 // javascript.js
 
-let userFirstNumber;
-let userOperator;
-let userSecondNumber;
+let userFirstNumber = "";
+let userOperator = "";
+let userSecondNumber = "";
+
+let displayElement = document.querySelector(".display");
+
+addButtonNumberCallbacks();
+
+function addButtonNumberCallbacks() {
+    let buttonNumberElements = document.querySelectorAll(".button-number");
+    buttonNumberElements.forEach((button) => {
+        button.addEventListener("click", () => {
+            userFirstNumber += button.id.at(-1);
+            updateDisplay(userFirstNumber);
+        });
+    });
+}
+
+function updateDisplay(text) {
+    displayElement.textContent = text;
+}
 
 
 function operate(operator, firstNumber, secondNumber) {
